@@ -4,12 +4,14 @@ import { AppComponent } from './app.component';
 import { FormsModule} from "@angular/forms";
 import { ServerComponent } from './server/server.component';
 import { MemoriesComponent } from './memories/memories.component';
+import { MsgsuccessComponent } from './msgsuccess/msgsuccess.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ServerComponent,
-    MemoriesComponent
+    MemoriesComponent,
+    MsgsuccessComponent
   ],
   imports: [
     BrowserModule,
