@@ -1,7 +1,10 @@
-<p>registeruser works!</p>
+<h2><p>register user</p></h2>
 <form>
-    <input type="text" name="username" placeholder="username">
-    <input type="password" name="password" placeholder="password">
-    <input type="password" name="password2" placeholder="password again">
-    <input type="submit" name="submit" value="submit">
+  <label for="username">Enter username</label>
+  <input type="text" id="username" name="username" placeholder="username" [(ngModel)]="username"><br>
+  <label for="password">Enter password</label>
+  <input type="password" id="password" name="password" placeholder="password" [(ngModel)]="password"><br>
+  <label for="password2">Enter password</label>
+  <input type="password"  id="password2" name="password2" placeholder="password again" [(ngModel)]="password2"><br>
+  <input [disabled]="username === ''" type="submit" name="submit" value="submit">
 </form>

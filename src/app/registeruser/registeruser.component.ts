@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-registeruser',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./registeruser.component.css']
 })
 export class RegisteruserComponent {
-
+  username = '';
+  password = '';
+  password2 = '';
 }

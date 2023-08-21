@@ -22,6 +22,8 @@ import { RegisteruserComponent } from './registeruser/registeruser.component';
   providers: [],
   bootstrap: [AppComponent,
     ServerComponent,
-    MemoriesComponent]
+    MemoriesComponent,
+    MsgsuccessComponent,
+    RegisteruserComponent]
 })
 export class AppModule { }
