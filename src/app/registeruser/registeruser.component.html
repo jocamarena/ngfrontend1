@@ -1,4 +1,15 @@
 <h2><p>register user</p></h2>
+<div>
+  <div [ngStyle]="{color: getColor()}">register form</div>
+  <div>
+    <div *ngFor="let user of users">{{user.username}} </div>
+  </div>
+  <span class="alert-success" *ngIf="isRegistered;else notRegistered">registered</span>
+  <ng-template #notRegistered>
+    <span class="alert-danger">not registered</span>
+  </ng-template><br>
+  <span class="alert-danger" *ngIf="!isRegistered">not registered</span>
+</div>
 <form>
   <label for="username">Enter username</label>
   <input type="text" id="username" name="username" placeholder="username" [(ngModel)]="username"><br>
@@ -6,5 +17,6 @@
   <input type="password" id="password" name="password" placeholder="password" [(ngModel)]="password"><br>
   <label for="password2">Enter password</label>
   <input type="password"  id="password2" name="password2" placeholder="password again" [(ngModel)]="password2"><br>
-  <input [disabled]="username === ''" type="submit" name="submit" value="submit">
+  <button [disabled]="username === ''" type="button" name="submit" (click)="submitRegistration()">submit</button>
+  <button [disabled]="username === ''" type="button" name="submit" (click)="clearRegistration()">clear</button>
 </form>
